@@ -1,0 +1,10 @@
+{
+  "arms": [
+    { "id": "none", "selector": "none", "candidates": 60, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "bm25-k1", "selector": "bm25", "candidates": 60, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-k1", "selector": "heuristic", "candidates": 60, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-choice-k1", "selector": "system-one-choice", "candidates": 60, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-noul-k1", "selector": "system-one-noul", "candidates": 60, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-k1", "selector": "oracle", "candidates": 60, "maxItems": 1, "maxTokens": 100000 }
+  ]
+}

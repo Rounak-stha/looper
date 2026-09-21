@@ -1,0 +1,34 @@
+{
+  "configId": "sel=plugin;route=plugin;model=coder",
+  "datasetVersion": "replace-me",
+  "selector": "replace-me",
+  "candidateLimit": 60,
+  "selectionBudget": {
+    "maxItems": 10,
+    "maxTokens": 30000
+  },
+  "dynamicContextMaxTokens": 30000,
+  "sessionBudgets": {
+    "maxSteps": 30,
+    "maxReasoningTokens": 400000,
+    "wallClockMs": 900000
+  },
+  "runsPerTask": 2,
+  "seed": 1,
+  "estimatedCostPerRunUsd": 0,
+  "budget": {
+    "capUsd": 1,
+    "reservePct": 40,
+    "runCapUsd": 0.1,
+    "ledgerPath": "runs/ledger.jsonl",
+    "minimumTasks": 20
+  },
+  "modelIds": [],
+  "decisionModelIds": [],
+  "reporting": {
+    "tier": "replace-me",
+    "arm": "replace-me"
+  },
+  "eventsPath": "runs/agent.jsonl",
+  "environmentId": "replace-me"
+}

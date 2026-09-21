@@ -1,0 +1,40 @@
+{
+  "configId": "openai-compatible-local-smoke-v1",
+  "datasetVersion": "local-smoke-v1",
+  "selector": "heuristic",
+  "candidateLimit": 10,
+  "selectionBudget": { "maxItems": 2, "maxTokens": 1000 },
+  "dynamicContextMaxTokens": 1000,
+  "sessionBudgets": { "maxSteps": 8, "maxReasoningTokens": 20000, "wallClockMs": 120000 },
+  "runsPerTask": 1,
+  "seed": 1,
+  "estimatedCostPerRunUsd": 0,
+  "budget": {
+    "capUsd": 10,
+    "reservePct": 0,
+    "runCapUsd": 2,
+    "ledgerPath": "runs/openai-compatible-ledger.jsonl",
+    "minimumTasks": 1
+  },
+  "modelIds": ["replace-with-served-model-id"],
+  "decisionModelIds": [],
+  "reporting": { "tier": "local-or-hosted", "arm": "openai-compatible" },
+  "eventsPath": "runs/openai-compatible-events.jsonl",
+  "environmentId": "replace-with-environment-id",
+  "reasoningProvider": {
+    "provider": "openai-compatible",
+    "endpoint": "http://127.0.0.1:11434/v1/chat/completions",
+    "model": "replace-with-served-model-id",
+    "tier": "local-or-hosted",
+    "apiKeyEnv": "OPENAI_COMPATIBLE_API_KEY",
+    "timeoutMs": 120000,
+    "maxRetries": 2,
+    "retryBaseDelayMs": 250,
+    "maxOutputTokens": 2000,
+    "jsonMode": true,
+    "maxDecodeRetries": 1,
+    "priceInPerM": 0,
+    "priceOutPerM": 0,
+    "estimatedMaxCostUsd": 0
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "benchmarkDirectory": ".cache/BugsInPy",
+  "benchmarkRevision": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "cacheDirectory": ".cache/bugsinpy-multirepo",
+  "workspaceDirectory": ".cache/bugsinpy-multirepo/worktrees",
+  "snapshotDirectory": "runs/bugsinpy-multirepo-snapshots",
+  "image": "looper/bugsinpy-multirepo-20@sha256:d091b7108f0ce147e4baaa99f35de1df5777cc37f1476056b81d095a3e471c8b",
+  "cpus": 2,
+  "memory": "4g",
+  "pidsLimit": 256,
+  "maxOutputBytes": 1000000,
+  "timeoutMs": 180000,
+  "projects": [
+    { "name": "PySnooper", "bugs": [1, 2, 3] },
+    { "name": "fastapi", "bugs": [1, 2, 4, 5] },
+    { "name": "httpie", "bugs": [1, 2, 3, 4, 5] },
+    { "name": "sanic", "bugs": [1, 2, 3, 4] },
+    { "name": "tqdm", "bugs": [1, 2, 3, 4] }
+  ]
+}

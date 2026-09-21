@@ -1,0 +1,7 @@
+{
+  "arms": [
+    { "id": "bm25-c255-k1", "selector": "bm25", "candidates": 255, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-c255-k1", "selector": "heuristic", "candidates": 255, "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-c255-k1", "selector": "oracle", "candidates": 255, "maxItems": 1, "maxTokens": 100000 }
+  ]
+}

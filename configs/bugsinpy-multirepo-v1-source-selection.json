@@ -1,0 +1,16 @@
+{
+  "arms": [
+    { "id": "bm25-c10-k1", "selector": "bm25", "candidates": 10, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "bm25-c30-k1", "selector": "bm25", "candidates": 30, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "bm25-c100-k1", "selector": "bm25", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "bm25-c255-k1", "selector": "bm25", "candidates": 255, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-c10-k1", "selector": "heuristic", "candidates": 10, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-c30-k1", "selector": "heuristic", "candidates": 30, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-c100-k1", "selector": "heuristic", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "heuristic-c255-k1", "selector": "heuristic", "candidates": 255, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-c10-k1", "selector": "oracle", "candidates": 10, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-c30-k1", "selector": "oracle", "candidates": 30, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-c100-k1", "selector": "oracle", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "oracle-c255-k1", "selector": "oracle", "candidates": 255, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 }
+  ]
+}

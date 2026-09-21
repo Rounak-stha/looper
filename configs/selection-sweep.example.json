@@ -1,0 +1,9 @@
+{
+  "arms": [
+    { "id": "bm25-N10-k5", "selector": "bm25", "candidates": 10, "maxItems": 5, "maxTokens": 30000 },
+    { "id": "bm25-N30-k5", "selector": "bm25", "candidates": 30, "maxItems": 5, "maxTokens": 30000 },
+    { "id": "bm25-N100-k5", "selector": "bm25", "candidates": 100, "maxItems": 5, "maxTokens": 30000 },
+    { "id": "heuristic-N100-k5", "selector": "heuristic", "candidates": 100, "maxItems": 5, "maxTokens": 30000 },
+    { "id": "oracle-N100-k5", "selector": "oracle", "candidates": 100, "maxItems": 5, "maxTokens": 30000 }
+  ]
+}

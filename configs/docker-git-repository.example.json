@@ -1,0 +1,20 @@
+{
+  "repository": "/absolute/path/to/local/git/checkout",
+  "image": "ghcr.io/your-org/your-repository-tests@sha256:REPLACE_WITH_64_HEX_DIGEST",
+  "cpus": 2,
+  "memory": "4g",
+  "pidsLimit": 256,
+  "maxOutputBytes": 1000000,
+  "workspaceDirectory": ".cache/docker-git-workspaces",
+  "snapshotDirectory": "runs/docker-git-snapshots",
+  "visibleTest": {
+    "command": "npm",
+    "args": ["test", "--", "--runInBand"],
+    "timeoutMs": 120000
+  },
+  "authoritativeTest": {
+    "command": "npm",
+    "args": ["run", "test:hidden"],
+    "timeoutMs": 300000
+  }
+}

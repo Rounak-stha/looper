@@ -1,0 +1,49 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.log
+
+# Repository checkouts, caches, worktrees, and snapshots
+.cache/
+tasks/*.jsonl
+
+# Generated experiment material is private by default. Only reviewed Markdown
+# reports and protocols below are publishable from runs/.
+runs/**
+!runs/bugsinpy-frozen-test-result.md
+!runs/system-one-selection-milestone.md
+!runs/development/
+runs/development/**
+!runs/development/bugsinpy-development-selection.md
+!runs/bugsinpy-multirepo-v1/
+runs/bugsinpy-multirepo-v1/**
+!runs/bugsinpy-multirepo-v1/README.md
+!runs/bugsinpy-multirepo-v1/selection-checkpoint.md
+!runs/bugsinpy-multirepo-v1/robustness-checkpoint.md
+!runs/bugsinpy-multirepo-v1/end-to-end-protocol.md
+!runs/bugsinpy-multirepo-v1/end-to-end-development-result.md
+!runs/bugsinpy-multirepo-v1/heldout-result.md
+
+# Concrete provider/development profiles can reveal account endpoints. Publish
+# only reviewed examples; experiment hashes and outcomes live in reports.
+configs/development/**
+!configs/development/*.example.json
+configs/bugsinpy-azure-pilot.json
+configs/bugsinpy-azure-test-frozen-v1.json
+scripts/run-bugsinpy-deepseek-dev.sh
+scripts/run-bugsinpy-deepseek-selection.sh

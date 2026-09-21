@@ -1,0 +1,32 @@
+{
+  "name": "looper-eval-harness",
+  "version": "0.1.0-alpha",
+  "description": "Provider-neutral experimental harness for evaluating coding-agent decision layers",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test $(find src -name '*.test.ts' -type f)",
+    "test:cli": "tsx src/cli/main.ts --help >/dev/null",
+    "audit:public": "node scripts/audit-public.mjs",
+    "verify": "npm run audit:public && npm run check && npm test && npm run test:cli && npm run build",
+    "cli": "tsx src/cli/main.ts",
+    "smoke:local": "rm -rf runs/local-smoke-events.jsonl runs/local-smoke-ledger.jsonl runs/task-validation.jsonl runs/local-smoke-tasks runs/routing-cases.jsonl runs/local-smoke-snapshots && HARNESS_PLUGIN=examples/local-smoke-plugin.ts HARNESS_TASK_OUTPUT_DIR=runs/local-smoke-tasks tsx src/cli/main.ts tasks qualify examples/local-smoke-task.jsonl 1 && HARNESS_PLUGIN=examples/local-smoke-plugin.ts tsx src/cli/main.ts eval selection-sweep runs/local-smoke-tasks/validated.jsonl configs/local-smoke-selection-sweep.json && tsx src/cli/main.ts report selection runs/e1a-sweep.jsonl && HARNESS_PLUGIN=examples/local-smoke-plugin.ts tsx src/cli/main.ts eval agent runs/local-smoke-tasks/validated.jsonl configs/local-smoke-agent.json && tsx src/cli/main.ts report summary runs/local-smoke-events.jsonl && HARNESS_PLUGIN=examples/local-smoke-plugin.ts tsx src/cli/main.ts replay build runs/local-smoke-events.jsonl runs/local-smoke-tasks/validated.jsonl && HARNESS_PLUGIN=examples/local-smoke-plugin.ts tsx src/cli/main.ts replay evaluate runs/routing-cases.jsonl rules"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "minisearch": "^7.2.0",
+    "simple-git": "^3.36.0",
+    "ts-morph": "^28.0.0"
+  }
+}

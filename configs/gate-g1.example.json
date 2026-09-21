@@ -1,0 +1,9 @@
+{
+  "gate": "G1",
+  "selectionResults": "runs/e1a-sweep.jsonl",
+  "baselineSelector": "bm25-N100-k5",
+  "armSelector": "jev-choice+noul-N100-k5",
+  "referenceSelector": "llm-N100-k5",
+  "armCostUsd": 0.0001,
+  "referenceCostUsd": 0.01
+}

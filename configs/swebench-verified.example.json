@@ -1,0 +1,8 @@
+{
+  "dataset": "SWE-bench/SWE-bench_Verified",
+  "split": "test",
+  "cacheDirectory": ".cache/swebench",
+  "evaluationDirectory": ".cache/SWE-bench",
+  "pythonCommand": ".venv/bin/python",
+  "evaluationTimeoutMs": 1800000
+}

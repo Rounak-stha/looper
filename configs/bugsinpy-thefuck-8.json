@@ -1,0 +1,16 @@
+{
+  "benchmarkDirectory": ".cache/BugsInPy",
+  "benchmarkRevision": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "cacheDirectory": ".cache/bugsinpy-multirepo",
+  "workspaceDirectory": ".cache/bugsinpy-multirepo/worktrees",
+  "snapshotDirectory": "runs/bugsinpy-multirepo-snapshots",
+  "image": "looper/bugsinpy-multirepo-20@sha256:3aff990ec7695b9f01d1ce5144cc7b8acd8a2ee7cd642725b117de16db9931a4",
+  "cpus": 2,
+  "memory": "4g",
+  "pidsLimit": 256,
+  "maxOutputBytes": 1000000,
+  "timeoutMs": 180000,
+  "projects": [
+    { "name": "thefuck", "bugs": [1, 2, 3, 4, 5, 6, 7, 9] }
+  ]
+}

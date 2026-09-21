@@ -1,0 +1,8 @@
+{
+  "arms": [
+    { "id": "none", "selector": "none", "candidates": 10, "maxItems": 1, "maxTokens": 1000 },
+    { "id": "heuristic-k1", "selector": "heuristic", "candidates": 10, "maxItems": 1, "maxTokens": 1000 },
+    { "id": "heuristic-k2", "selector": "heuristic", "candidates": 10, "maxItems": 2, "maxTokens": 1000 },
+    { "id": "oracle-k1", "selector": "oracle", "candidates": 10, "maxItems": 1, "maxTokens": 1000 }
+  ]
+}

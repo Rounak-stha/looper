@@ -1,0 +1,17 @@
+{
+  "provider": "azure",
+  "endpoint": "https://YOUR-RESOURCE.services.ai.azure.com/openai/v1",
+  "model": "YOUR-EXACT-DEPLOYMENT-OR-MODEL-NAME",
+  "tier": "cheap",
+  "apiKeyEnv": "AZURE_DEEPSEEK_API_KEY",
+  "timeoutMs": 120000,
+  "maxOutputTokens": 1000,
+  "tokenParameter": "max_tokens",
+  "includeTemperature": false,
+  "jsonMode": true,
+  "maxDecodeRetries": 1,
+  "maxRetries": 2,
+  "retryBaseDelayMs": 250,
+  "priceInPerM": 0,
+  "priceOutPerM": 0
+}

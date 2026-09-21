@@ -1,0 +1,31 @@
+{
+  "configId": "azure-openai-bugsinpy-pilot-v1",
+  "datasetVersion": "bugsinpy-black-pilot-v1",
+  "seed": 7,
+  "runsPerTask": 1,
+  "selector": "bm25",
+  "candidateLimit": 60,
+  "selectionBudget": { "maxItems": 5, "maxTokens": 100000 },
+  "dynamicContextMaxTokens": 30000,
+  "sessionBudgets": { "maxSteps": 30, "maxReasoningTokens": 60000, "wallClockMs": 900000 },
+  "eventsPath": "runs/azure-openai-events.jsonl",
+  "environmentId": "looper/bugsinpy-black-pilot@sha256:4a571070d1630d783091be3226ab3e21d6f3f2bc241cbbfae167d3a8d3bc633d",
+  "modelIds": ["gpt-5.6-sol"],
+  "decisionModelIds": [],
+  "reporting": { "arm": "azure-openai-pilot", "environment": "bugsinpy-black" },
+  "reasoningProvider": {
+    "provider": "azure",
+    "endpoint": "https://YOUR-RESOURCE.services.ai.azure.com/openai/v1",
+    "model": "gpt-5.6-sol",
+    "tier": "strong",
+    "apiKeyEnv": "AZURE_OPENAI_API_KEY",
+    "timeoutMs": 120000,
+    "maxOutputTokens": 4000,
+    "tokenParameter": "max_completion_tokens",
+    "includeTemperature": false,
+    "jsonMode": true,
+    "maxDecodeRetries": 1,
+    "maxRetries": 2,
+    "retryBaseDelayMs": 250
+  }
+}

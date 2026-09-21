@@ -1,0 +1,5 @@
+{
+  "arms": [
+    { "id": "gpt-5.6-sol-c100-k1", "selector": "llm-listwise", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 }
+  ]
+}

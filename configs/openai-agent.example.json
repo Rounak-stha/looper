@@ -1,0 +1,33 @@
+{
+  "configId": "openai-agent-v1",
+  "datasetVersion": "replace-with-frozen-dataset-id",
+  "seed": 7,
+  "runsPerTask": 1,
+  "selector": "bm25",
+  "candidateLimit": 60,
+  "selectionBudget": { "maxItems": 5, "maxTokens": 100000 },
+  "dynamicContextMaxTokens": 30000,
+  "sessionBudgets": { "maxSteps": 30, "maxReasoningTokens": 60000, "deadlineMs": 900000 },
+  "budget": { "ledgerPath": "runs/openai-ledger.jsonl", "capUsd": 10, "runCapUsd": 2, "reservePct": 0.1, "minimumTasks": 1 },
+  "estimatedCostPerRunUsd": 1,
+  "eventsPath": "runs/openai-events.jsonl",
+  "environmentId": "replace-with-environment-id",
+  "modelIds": ["replace-with-openai-model-id"],
+  "decisionModelIds": [],
+  "reporting": { "arm": "openai", "environment": "replace-with-environment" },
+  "reasoningProvider": {
+    "provider": "openai",
+    "model": "replace-with-openai-model-id",
+    "tier": "strong",
+    "apiKeyEnv": "OPENAI_API_KEY",
+    "timeoutMs": 120000,
+    "maxOutputTokens": 4000,
+    "jsonMode": true,
+    "maxDecodeRetries": 1,
+    "maxRetries": 2,
+    "retryBaseDelayMs": 250,
+    "priceInPerM": 0,
+    "priceOutPerM": 0,
+    "estimatedMaxCostUsd": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "gate": "G2",
+  "baselineEvents": "runs/baseline.jsonl",
+  "armEvents": "runs/selection-arm.jsonl",
+  "noiseBaselineFirst": "runs/baseline-repeat-a.jsonl",
+  "noiseBaselineSecond": "runs/baseline-repeat-b.jsonl"
+}

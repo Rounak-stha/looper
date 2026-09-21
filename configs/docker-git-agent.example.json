@@ -1,0 +1,39 @@
+{
+  "configId": "docker-git-openai-compatible-v1",
+  "datasetVersion": "replace-with-frozen-dataset-id",
+  "seed": 7,
+  "runsPerTask": 1,
+  "selector": "none",
+  "candidateLimit": 60,
+  "selectionBudget": { "maxItems": 10, "maxTokens": 30000 },
+  "dynamicContextMaxTokens": 30000,
+  "sessionBudgets": { "maxSteps": 30, "maxReasoningTokens": 60000, "deadlineMs": 900000 },
+  "budget": {
+    "ledgerPath": "runs/docker-git-ledger.jsonl",
+    "capUsd": 10,
+    "runCapUsd": 1,
+    "reservePct": 0.1,
+    "minimumTasks": 1
+  },
+  "estimatedCostPerRunUsd": 0.5,
+  "eventsPath": "runs/docker-git-events.jsonl",
+  "environmentId": "docker-image-digest-goes-here",
+  "modelIds": ["replace-with-provider-model-id"],
+  "decisionModelIds": [],
+  "reporting": { "arm": "S0-R0", "environment": "docker-git" },
+  "reasoningProvider": {
+    "provider": "openai-compatible",
+    "endpoint": "https://api.example.com/v1",
+    "model": "replace-with-provider-model-id",
+    "tier": "strong",
+    "apiKeyEnv": "OPENAI_COMPATIBLE_API_KEY",
+    "timeoutMs": 120000,
+    "maxOutputTokens": 4000,
+    "maxDecodeRetries": 1,
+    "maxRetries": 2,
+    "retryBaseDelayMs": 250,
+    "priceInPerM": 0,
+    "priceOutPerM": 0,
+    "estimatedMaxCostUsd": 0.5
+  }
+}

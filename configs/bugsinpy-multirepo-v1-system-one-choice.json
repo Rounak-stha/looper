@@ -1,0 +1,8 @@
+{
+  "arms": [
+    { "id": "system-one-choice-c10-k1", "selector": "system-one-choice", "candidates": 10, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-choice-c30-k1", "selector": "system-one-choice", "candidates": 30, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-choice-c100-k1", "selector": "system-one-choice", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-choice-c255-k1", "selector": "system-one-choice", "candidates": 255, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 }
+  ]
+}

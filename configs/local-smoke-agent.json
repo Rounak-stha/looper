@@ -1,0 +1,33 @@
+{
+  "configId": "local-smoke-v1",
+  "datasetVersion": "local-smoke-v1",
+  "selector": "heuristic",
+  "candidateLimit": 10,
+  "selectionBudget": { "maxItems": 2, "maxTokens": 1000 },
+  "dynamicContextMaxTokens": 1000,
+  "sessionBudgets": { "maxSteps": 6, "maxReasoningTokens": 1000, "wallClockMs": 30000 },
+  "runsPerTask": 1,
+  "seed": 1,
+  "estimatedCostPerRunUsd": 0,
+  "budget": {
+    "capUsd": 1,
+    "reservePct": 0,
+    "runCapUsd": 1,
+    "ledgerPath": "runs/local-smoke-ledger.jsonl",
+    "minimumTasks": 1
+  },
+  "modelIds": ["local-script"],
+  "decisionModelIds": [],
+  "reporting": { "tier": "local", "arm": "smoke" },
+  "eventsPath": "runs/local-smoke-events.jsonl",
+  "environmentId": "local-unsandboxed-smoke",
+  "scriptedDecisions": [
+    {
+      "tool": {
+        "name": "write_file",
+        "path": "math.js",
+        "content": "export function add(a, b) {\n  return a + b;\n}\n"
+      }
+    }
+  ]
+}

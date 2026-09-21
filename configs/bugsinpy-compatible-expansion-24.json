@@ -1,0 +1,18 @@
+{
+  "benchmarkDirectory": ".cache/BugsInPy",
+  "benchmarkRevision": "11c5f1eea954a42132cfd06bf257766a7963e0fd",
+  "cacheDirectory": ".cache/bugsinpy-multirepo",
+  "workspaceDirectory": ".cache/bugsinpy-multirepo/worktrees",
+  "snapshotDirectory": "runs/bugsinpy-multirepo-snapshots",
+  "image": "looper/bugsinpy-multirepo-20@sha256:d091b7108f0ce147e4baaa99f35de1df5777cc37f1476056b81d095a3e471c8b",
+  "cpus": 2,
+  "memory": "4g",
+  "pidsLimit": 256,
+  "maxOutputBytes": 1000000,
+  "timeoutMs": 180000,
+  "projects": [
+    { "name": "fastapi", "bugs": [7, 8, 9, 10, 12, 13, 14, 16] },
+    { "name": "tornado", "bugs": [3, 9, 10, 11, 12, 13, 14, 15] },
+    { "name": "youtube-dl", "bugs": [7, 8, 9, 10, 11, 12, 13, 14] }
+  ]
+}

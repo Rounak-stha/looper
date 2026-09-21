@@ -1,0 +1,6 @@
+{
+  "arms": [
+    { "id": "system-one-noul-c100-k1", "selector": "system-one-noul", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 },
+    { "id": "system-one-combined-c100-k1", "selector": "system-one-combined", "candidates": 100, "poolCandidates": 1000, "candidateKinds": ["file"], "maxItems": 1, "maxTokens": 100000 }
+  ]
+}
