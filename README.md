@@ -23,13 +23,35 @@ The core does not prescribe Git, a parser, an index, search, a sandbox, a model 
 
 Twenty-six BugsInPy `T-fix` tasks qualified with fail-before/pass-after evidence: 20 development tasks and six initially held-out tasks.
 
-| Arm | Development (3 repetitions) | Held out (1 run) |
-|---|---:|---:|
-| S0, no initial selection | 44/60 | 6/6 |
-| System One Choice | 45/60 | 6/6 |
-| Strong generative S3 | 46/60 | 6/6 |
+#### End-to-end development runs
 
-Development uncertainty intervals overlapped zero. Held-out accuracy saturated. Choice reduced steps, tool calls, and dynamic context, but did not reduce coder tokens on held-out tasks. Seven Choice development runs were conservatively retained as budget failures after host/provider stalls.
+Each of the 20 development tasks was run three times. Values below are per-run means except wall time, which uses the median because seven retained Choice runs experienced host/provider stalls.
+
+| Arm | Repairs | Coder tokens | Steps | Tool calls | Dynamic context | Median wall time |
+|---|---:|---:|---:|---:|---:|---:|
+| S0, no initial selection | 44/60 | 39,161 | 10.13 | 9.12 | 17,388 chars | 28.3 s |
+| System One Choice | 45/60 | 36,989 | 7.52 | 6.52 | 16,174 chars | 32.5 s |
+| Strong generative S3 | 46/60 | 44,292 | 8.45 | 7.43 | 16,120 chars | 34.5 s |
+
+Relative to S0, Choice used 5.5% fewer coder tokens, 25.8% fewer steps, 28.5% fewer tool calls, and 7.0% less dynamically loaded context. The repair difference was not conclusive: paired uncertainty intervals overlapped zero. Seven Choice runs that crossed the wall-time budget after host/provider stalls remain counted as failures and were not rerun.
+
+#### Final evaluation on six separately held tasks
+
+These tasks were opened once after the configurations and interpretation were frozen.
+
+| Arm | Repairs | Coder tokens | Steps | Tool calls | Dynamic context | Mean wall time |
+|---|---:|---:|---:|---:|---:|---:|
+| S0, no initial selection | 6/6 | 16,962 | 9.33 | 8.33 | 12,990 chars | 32.49 s |
+| System One Choice | 6/6 | 25,145 | 6.67 | 5.67 | 11,431 chars | 31.88 s |
+| Strong generative S3 | 6/6 | 25,760 | 6.83 | 5.83 | 11,137 chars | 34.07 s |
+
+Accuracy saturated at 6/6 for every arm. Choice used fewer steps, tools, and dynamic context than S0, but 48.2% more coder tokens. Six tasks are too few to establish an accuracy, latency, or token winner.
+
+#### File-selection checkpoint
+
+When selecting one relevant file from 100 candidates, Choice and the strong generative selector each selected a gold file on 16/20 development tasks. Choice took a mean 486 ms per selection versus 3,095 ms for the strong selector—about 6.4× lower selector latency. This is selection latency, not end-to-end agent speed.
+
+Provider-reported token counts are not necessarily comparable across providers. Selector usage must also be included in any total-token analysis, and incomplete pricing prevents a defensible dollar-cost comparison.
 
 Read the full limitations and protocols:
 
